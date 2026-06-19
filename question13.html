@@ -2,32 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User-Defined Functions</title>
 </head>
 <body>
-    <h3>Calculator Using Functions</h3>
 
+    <h3>Calculator Using User-Defined Functions</h3>
+
+    <!-- Input Fields -->
     <input type="number" id="num1" placeholder="Enter first number">
     <input type="number" id="num2" placeholder="Enter second number">
+
+    <!-- Button -->
     <button onclick="performOperations()">Calculate</button>
 
+    <!-- Result Display -->
     <p id="result"></p>
 
     <script>
-       
+
+        // Function for Addition
         function add(a, b) {
             return a + b;
         }
 
+        // Function for Subtraction
         function subtract(a, b) {
             return a - b;
         }
 
-       
+        // Function for Multiplication
         function multiply(a, b) {
             return a * b;
         }
 
+        // Function for Division
         function divide(a, b) {
             if (b === 0) {
                 return "Cannot divide by zero";
@@ -35,6 +44,7 @@
             return a / b;
         }
 
+        // Function to Perform All Operations
         function performOperations() {
             const num1 = parseFloat(document.getElementById("num1").value);
             const num2 = parseFloat(document.getElementById("num2").value);
@@ -48,6 +58,8 @@
 
             document.getElementById("result").innerHTML = results;
         }
+
     </script>
+
 </body>
 </html>
